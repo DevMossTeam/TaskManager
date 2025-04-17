@@ -3,9 +3,11 @@ import 'package:get/get.dart';
 import '../controllers/add_task_controller.dart';
 
 class AddTaskView extends StatelessWidget {
-  final controller = Get.put(AddTaskController());
+  // Hapus `const` constructor
+  AddTaskView({Key? key}) : super(key: key);
 
-  const AddTaskView({super.key});
+  // Inisialisasi controller non-const
+  final AddTaskController controller = Get.put(AddTaskController());
 
   @override
   Widget build(BuildContext context) {

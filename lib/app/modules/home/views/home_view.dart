@@ -5,9 +5,11 @@ import '../../add_task/views/add_task_view.dart';
 import '../widgets/task_card.dart';
 
 class HomeView extends StatelessWidget {
-  final HomeController controller = Get.find<HomeController>();
+  // Hapus `const` constructor karena controller bukan constant
+  HomeView({Key? key}) : super(key: key);
 
-  const HomeView({super.key});
+  // Inisialisasi controller di level field (non-const)
+  final HomeController controller = Get.find<HomeController>();
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +22,7 @@ class HomeView extends StatelessWidget {
         return ListView.builder(
           itemCount: controller.tasks.length,
           itemBuilder: (context, index) {
-            final task = controller.tasks[index];
-            return TaskCard(task: task);
+            return TaskCard(task: controller.tasks[index]);
           },
         );
       }),

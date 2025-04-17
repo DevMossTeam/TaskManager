@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'app/routes/app_pages.dart';
+import 'package:taskmanager/app/routes/app_pages.dart';  // pake package-import
 
 void main() {
-  runApp(
-    GetMaterialApp(
+  runApp(const MyApp());
+}
+
+// Definisi MyApp, agar widget_test.dart bisa menemukan kelas ini
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      title: 'Task Manager',
       debugShowCheckedModeBanner: false,
-      title: "Task Manager",
       initialRoute: AppPages.initial,
       getPages: AppPages.routes,
-    ),
-  );
+    );
+  }
 }
