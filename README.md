@@ -1,44 +1,57 @@
 ```
 lib/
 │
-├── main.dart                            <-- Root widget (FAB & BottomNav di sini)
+├── main.dart
 │
 ├── app/
 │   ├── models/
-│   │   └── task_model.dart              <-- Model data Task
-│   │
+│   │   └── task_model.dart
+│
 │   ├── routes/
-│   │   └── app_pages.dart               <-- Routing menggunakan GetX (opsional)
-│   │
+│   │   └── app_pages.dart
+│
+│   ├── widgets/
+│   │   └── task_card.dart
+│
 │   ├── modules/
+│   │
 │   │   ├── home/
 │   │   │   ├── bindings/
 │   │   │   │   └── home_binding.dart
 │   │   │   ├── controllers/
 │   │   │   │   └── home_controller.dart
 │   │   │   ├── views/
-│   │   │   │   └── home_view.dart       <-- Tampilan daftar Task
-│   │   │
+│   │   │   │   └── home_view.dart
+│
 │   │   ├── add_task/
 │   │   │   ├── bindings/
 │   │   │   │   └── add_task_binding.dart
 │   │   │   ├── controllers/
 │   │   │   │   └── add_task_controller.dart
 │   │   │   ├── views/
-│   │   │   │   └── add_task_view.dart   <-- Form untuk tambah task
-│   │   │
+│   │   │   │   └── add_task_view.dart
+│
 │   │   ├── checklist/
-│   │   │   └── views/
-│   │   │       └── checklist_view.dart  <-- Placeholder (opsional)
-│   │   │
+│   │   │   ├── bindings/
+│   │   │   │   └── checklist_binding.dart
+│   │   │   ├── controllers/
+│   │   │   │   └── checklist_controller.dart
+│   │   │   ├── views/
+│   │   │   │   └── checklist_view.dart
+│
 │   │   ├── calendar/
-│   │   │   └── views/
-│   │   │       └── calendar_view.dart   <-- Placeholder (opsional)
-│   │   │
+│   │   │   ├── bindings/
+│   │   │   │   └── calendar_binding.dart
+│   │   │   ├── controllers/
+│   │   │   │   └── calendar_controller.dart
+│   │   │   ├── views/
+│   │   │   │   └── calendar_view.dart
+│
 │   │   ├── profile/
-│   │       └── views/
-│   │           └── profile_view.dart    <-- Placeholder (opsional)
-│   │
-│   ├── widgets/
-│   │   └── task_card.dart               <-- Komponen kartu task
+│   │   │   ├── bindings/
+│   │   │   │   └── profile_binding.dart
+│   │   │   ├── controllers/
+│   │   │   │   └── profile_controller.dart
+│   │   │   ├── views/
+│   │   │   │   └── profile_view.dart
 ```
